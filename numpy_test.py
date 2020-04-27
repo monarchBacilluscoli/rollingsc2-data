@@ -7,16 +7,16 @@ result = {}
 is_show_each = True
 is_subfigure = True
 # prob_type = 0 # 0:3objs, 1: 2objs
-obj_show = 2  # 0: dmg aver, 1: dmg best, 2: hurt aver, 3: hurt best
+obj_show = 0  # 0: dmg aver, 1: dmg best, 2: hurt aver, 3: hurt best
 sub_figure_wid = 3
 sub_figure_height = 2
 
-title2 = {1: "aver damage to enemy",
-          2: "best damage to enemy",
-          3: "aver damage to mine",
-          4: "best damage to mine",
-          5: "aver win loop",
-          6: "best win loop"}
+title2 = {0: "aver damage to enemy",
+          1: "best damage to enemy",
+          2: "aver damage to mine",
+          3: "best damage to mine",
+          4: "aver win loop",
+          5: "best win loop"}
 
 
 # fmri = sns.load_dataset("fmri")
@@ -28,7 +28,8 @@ if(is_subfigure):
     f, axes = plt.subplots(sub_figure_height, sub_figure_wid, sharex=True)
 
 sub_count = 0
-for i in np.hstack((range(3, 6), 9, 10)):
+# for i in np.hstack((range(3, 6), 9, 10,11)):
+for i in np.hstack((range(3, 6),11)):
     a = np.loadtxt("./"+str(i)+"_start.txt")
 
     one = a[0:101, obj_show]
