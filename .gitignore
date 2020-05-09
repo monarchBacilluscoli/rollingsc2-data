@@ -138,5 +138,8 @@ dmypy.json
 cython_debug/
 
 #some pics
-.svg
-.png
+*.svg
+*.png
+
+#some data files
+*.SC2Replay
