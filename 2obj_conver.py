@@ -54,6 +54,7 @@ for kv in aver_test_results.items():
     aver_test_results[kv[0]] = aver_test_results[kv[0]]/test_count[kv[0]]
     plt.figure()
     sns.lineplot(data=aver_test_results[kv[0]][['dmg', 'max_dmg', 'hurt', 'max_hurt']])
+    plt.title("2 Objs Convergence Curve 2000")
 plt.show()
 
 print(aver_test_results)

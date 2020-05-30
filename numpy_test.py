@@ -29,7 +29,7 @@ if(is_subfigure):
 
 sub_count = 0
 # for i in np.hstack((range(3, 6), 9, 10,11)):
-for i in np.hstack((range(3, 6),11)):
+for i in np.hstack(range(2, 6)):
     a = np.loadtxt("./"+str(i)+"_start.txt")
 
     one = a[0:101, obj_show]
