@@ -1,0 +1,5 @@
+sim_length = "sim_length"
+is_enemy_pop_evo = "is_enemy_pop_evo"
+population_size = "population_size"
+max_generations = "max_generations"
+interval_size = "interval_size"
