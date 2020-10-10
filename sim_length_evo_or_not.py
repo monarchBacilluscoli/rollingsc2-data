@@ -9,6 +9,8 @@ import seaborn as sns
 
 import setting_names as nm
 
+file_path = "/home/liuyongfeng/s2client-api-liu/s2client-api/scores/test_scores.txt"
+start_comment = "evo higher generations"
 
 def parse_setting(settings, item):
     individuals = settings.split(",")
@@ -20,14 +22,12 @@ def parse_setting(settings, item):
     return "no value"
 
 
-# todo 先要处理成长类型数据，（再处理成宽类型数据？），然后绘图。
+# 准备数据
 
-print(nm.sim_length)
+raw_colomns = [nm.damage_to_enemy, 'dmg_shd', nm.damage_to_mine, 'hurt_shd', 'heal',
+               'heal_shd', nm.loops, 'map', 'time', 'settings']
 
-raw_colomns = ['dmg', 'dmg_shd', 'hurt', 'hurt_shd', 'heal',
-               'heal_shd', 'win_loop', 'map', 'time', 'settings']
-
-f_in = open("test_scores.txt")
+f_in = open(file_path, )
 line = f_in.readline()
 block = ""
 data_name = ""
@@ -35,8 +35,11 @@ whole = pd.DataFrame(columns=raw_colomns)
 
 # 读取数据
 
+start = False
 while line:  # 读文件
-    if (line.find("//") == -1 and line != ""):  # 写入
+    if (line.find(start_comment) != -1):
+        start = True;
+    if (start and line.find("//") == -1 and line != ""):  # 写入
         block += line
     line = f_in.readline()
 
@@ -47,7 +50,7 @@ whole = pd.concat([whole, df])
 # 进一步处理
 
 whole.insert(whole.shape[1], nm.is_enemy_pop_evo, 0)
-whole.insert(whole.shape[1], "sim_length", 0)
+whole.insert(whole.shape[1], nm.sim_length, 0)
 whole.insert(whole.shape[1], nm.population_size, 0)
 
 for i in range(0, whole.shape[0]):
@@ -62,16 +65,19 @@ for i in range(0, whole.shape[0]):
 
 sns.set_theme(style="ticks", palette="pastel")
 
-sns.relplot(data=whole, y="dmg", x=nm.sim_length, hue=nm.is_enemy_pop_evo) # 散点图
+# sns.relplot(data=whole, y=nm.damage_to_enemy, x=nm.sim_length, hue=nm.is_enemy_pop_evo)  # 散点图，可以不要
 
 plt.figure()
-sns.boxplot(data=whole, y="dmg", x=nm.sim_length, hue=nm.is_enemy_pop_evo) # 箱线图
+sns.boxplot(data=whole, y=nm.damage_to_enemy,
+            x=nm.sim_length, hue=nm.is_enemy_pop_evo)  # 箱线图
+# sns.boxplot(data=whole, y="hurt", x=nm.sim_length, hue=nm.is_enemy_pop_evo) # 箱线图
 
-sns.catplot(data=whole, y="dmg", x=nm.sim_length, hue=nm.is_enemy_pop_evo, kind="point") # 猫图？
+sns.catplot(data=whole, y=nm.damage_to_enemy, x=nm.sim_length,
+            hue=nm.is_enemy_pop_evo, kind="point", capsize=.2)  # 猫图？
+# sns.catplot(data=whole, y=nm.loops, x=nm.sim_length, hue=nm.is_enemy_pop_evo, kind="point") # 猫图？
 
 plt.show()
 print("end")
-
 
 
 # print(whole.iloc[:, 9])
