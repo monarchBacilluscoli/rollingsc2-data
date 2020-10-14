@@ -90,17 +90,17 @@ sns.relplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
 sns.boxplot(data=sim_length_com, y=nm.damage_to_enemy,
             x=nm.sim_length, hue=nm.is_enemy_pop_evo)
 
-fig, axs = plt.subplots(ncols=2, nrows=2, figsize=(10, 10))
+fig, axs = plt.subplots(ncols=2, nrows=1, figsize=(8, 4))
 sns.pointplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
-              hue=nm.is_enemy_pop_evo, kind="point", capsize=.2, ax=axs[0, 0])
+              hue=nm.is_enemy_pop_evo, kind="point", capsize=.2, ax=axs[0])
 sns.pointplot(data=sim_length_com, y=nm.loops, x=nm.sim_length,
-              hue=nm.is_enemy_pop_evo, kind="point", capsize=.2, ax=axs[0, 1])
-sns.swarmplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
-              hue=nm.is_enemy_pop_evo, ax=axs[1, 0])
-sns.swarmplot(data=sim_length_com, y=nm.loops, x=nm.sim_length,
-              hue=nm.is_enemy_pop_evo, ax=axs[1, 1])
-plt.suptitle(nm.max_generations + ": " + str(max_generations_filter) + ", ")
-
+              hue=nm.is_enemy_pop_evo, kind="point", capsize=.2, ax=axs[1])
+# sns.swarmplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
+#               hue=nm.is_enemy_pop_evo, ax=axs[1, 0])
+# sns.swarmplot(data=sim_length_com, y=n%m.loops, x=nm.sim_length,
+#               hue=nm.is_enemy_pop_evo, ax=axs[1, 1])
+# plt.suptitle(nm.max_generations + ": " + str(max_generations_filter) + ", ")
+fig.savefig("sim_length.svg")
 
 sns.catplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
             hue=nm.is_enemy_pop_evo, kind="swarm")
@@ -130,17 +130,17 @@ population_size_filter = 10
 generation_com = whole[(whole[nm.sim_length] == sim_length_filter) & (
     whole[nm.population_size] == population_size_filter)]
 
-fig, axs = plt.subplots(ncols=2, nrows=2, figsize=(10, 10))
-sns.pointplot(data=generation_com, y=nm.damage_to_enemy,
-              x=nm.max_generations, hue=nm.is_enemy_pop_evo, capsize=.2, ax=axs[0, 0])
-sns.pointplot(data=generation_com, y=nm.loops,
-              x=nm.max_generations, hue=nm.is_enemy_pop_evo, capsize=.2, ax=axs[0, 1])  # 猫图形式
-sns.swarmplot(data=generation_com, y=nm.damage_to_enemy,
-              x=nm.max_generations, hue=nm.is_enemy_pop_evo, ax=axs[1, 0])
-sns.swarmplot(data=generation_com, y=nm.loops,
-              x=nm.max_generations, hue=nm.is_enemy_pop_evo, ax=axs[1, 1])  # 虫子图形式
-plt.suptitle(nm.sim_length+": "+str(sim_length_filter))
-
+fig, axs = plt.subplots(ncols=2, nrows=1, figsize=(8, 4))
+sns.boxplot(data=generation_com, y=nm.damage_to_enemy,
+            x=nm.max_generations, hue=nm.is_enemy_pop_evo,  ax=axs[0])
+sns.boxplot(data=generation_com, y=nm.loops,
+            x=nm.max_generations, hue=nm.is_enemy_pop_evo,  ax=axs[1])  # 猫图形式
+# sns.swarmplot(data=generation_com, y=nm.damage_to_enemy,
+#               x=nm.max_generations, hue=nm.is_enemy_pop_evo, ax=axs[1, 0])
+# sns.swarmplot(data=generation_com, y=nm.loops,
+#               x=nm.max_generations, hue=nm.is_enemy_pop_evo, ax=axs[1, 1])  # 虫子图形式
+# plt.suptitle(nm.sim_length+": "+str(sim_length_filter))
+fig.savefig("max_generations.svg")
 
 # plt.figure()
 # sns.boxplot(data=generation_com, y=nm.damage_to_enemy,
@@ -152,16 +152,17 @@ max_generation_filter = 40
 population_com = whole[(whole[nm.sim_length] ==
                         sim_length_filter) & (whole[nm.max_generations] == max_generation_filter)]
 
-fig, axs = plt.subplots(ncols=2, nrows=2, figsize=(10, 10))
+fig, axs = plt.subplots(ncols=2, nrows=1, figsize=(8, 4))
 sns.boxplot(data=population_com, y=nm.damage_to_enemy,
-            x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[0, 0])
+            x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[0])
 sns.boxplot(data=population_com, y=nm.loops,
-            x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[0, 1])  # 猫图形式
-sns.swarmplot(data=population_com, y=nm.damage_to_enemy,
-              x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[1, 0])
-sns.swarmplot(data=population_com, y=nm.loops,
-              x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[1, 1])  # 虫子图形式
-plt.suptitle(nm.sim_length+": "+str(sim_length_filter))
+            x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[1])  # 猫图形式
+# sns.swarmplot(data=population_com, y=nm.damage_to_enemy,
+#               x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[1, 0])
+# sns.swarmplot(data=population_com, y=nm.loops,
+#               x=nm.population_size, hue=nm.is_enemy_pop_evo, ax=axs[1, 1])  # 虫子图形式
+# plt.suptitle(nm.sim_length+": "+str(sim_length_filter))
+fig.savefig("pop_size.svg")
 
 # 对不同population_size相同设置的个体进行显著性差异检验
 sls = population_com[nm.is_enemy_pop_evo].unique()
