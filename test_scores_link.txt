@@ -1,0 +1,1 @@
+/home/liuyongfeng/s2client-api-liu/s2client-api/scores/test_scores.txt
