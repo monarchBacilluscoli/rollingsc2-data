@@ -91,10 +91,10 @@ sns.boxplot(data=sim_length_com, y=nm.damage_to_enemy,
             x=nm.sim_length, hue=nm.is_enemy_pop_evo)
 
 fig, axs = plt.subplots(ncols=2, nrows=1, figsize=(8, 4))
-sns.pointplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
-              hue=nm.is_enemy_pop_evo, kind="point", capsize=.2, ax=axs[0])
-sns.pointplot(data=sim_length_com, y=nm.loops, x=nm.sim_length,
-              hue=nm.is_enemy_pop_evo, kind="point", capsize=.2, ax=axs[1])
+sns.boxplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
+              hue=nm.is_enemy_pop_evo,  ax=axs[0])
+sns.boxplot(data=sim_length_com, y=nm.loops, x=nm.sim_length,
+              hue=nm.is_enemy_pop_evo, ax=axs[1])
 # sns.swarmplot(data=sim_length_com, y=nm.damage_to_enemy, x=nm.sim_length,
 #               hue=nm.is_enemy_pop_evo, ax=axs[1, 0])
 # sns.swarmplot(data=sim_length_com, y=n%m.loops, x=nm.sim_length,
