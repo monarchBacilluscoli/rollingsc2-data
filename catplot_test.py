@@ -6,7 +6,7 @@ import re
 import sys
 from io import StringIO
 
-obj_num = 6 # dmg dmg hurt hurt heal heal loop 
+obj_num = 6  # dmg dmg hurt hurt heal heal loop
 map_name = 'PCANP_EnemyZealotsModMoreVSMarines'
 
 
@@ -17,7 +17,7 @@ all_data = {}
 # print(data)
 
 # catplot 一次只能对比同一个目标, 也就是三个目标想要一起比较z的话最好是子图
-f_in = open("./test_scores.txt")
+f_in = open("./old_experiment.txt")
 line = f_in.readline()
 block = ""
 data_name = ""
@@ -65,7 +65,7 @@ for kv in all_data.items():
     final_sheet[kv[0]] = kv[1].iloc[:, obj_num]
 # plt.show()
 print(final_sheet)
-sns.catplot(kind='box',data=final_sheet)
+sns.catplot(kind='box', data=final_sheet)
 # sns.pointplot(data=final_sheet)
 
 plt.show()
