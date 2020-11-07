@@ -1,13 +1,16 @@
+import setting_names as nm
+from io import StringIO
+import sys
+import re
+import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-import pandas as pd
-import re
-import sys
-from io import StringIO
+plt.rcParams['font.sans-serif'] = ['SimHei']
 
-data_scolumns = ['dmg', 'max_dmg', 'hurt',
-                 'max_hurt', 'winloop', 'max_winloop']
+
+data_scolumns = [nm.aver+nm.damage_to_enemy, nm.best+nm.damage_to_enemy, nm.aver+nm.damage_to_mine,
+                 nm.best+nm.damage_to_mine, nm.aver+nm.loops, nm.best+nm.loops]
 aver_test_results = {}
 test_count = {}
 
@@ -49,12 +52,19 @@ else:
     aver_test_results[data_name] = df
     test_count[data_name] = 1
 
+
+# sns.set(style="darkgrid")
 # 对于每一类数据, 除以这个数据的个数并展示
 for kv in aver_test_results.items():
     aver_test_results[kv[0]] = aver_test_results[kv[0]]/test_count[kv[0]]
-    plt.figure()
-    sns.lineplot(data=aver_test_results[kv[0]][['dmg', 'max_dmg', 'hurt', 'max_hurt']])
-    plt.title("2 Objs Convergence Curve 2000")
+    plt.figure(figsize=(5, 3.5))
+    sns.lineplot(data=aver_test_results[kv[0]][[
+                 nm.aver+nm.damage_to_enemy, nm.best+nm.damage_to_enemy, nm.aver+nm.damage_to_mine, nm.best+nm.damage_to_mine]])
+    # plt.title("2 Objs Convergence Curve 2000")
+    plt.xlabel("Generations")
+    plt.ylabel("Health points")
+    plt.savefig("2_obj_conver.svg")
+    plt.show()
 plt.show()
 
 print(aver_test_results)

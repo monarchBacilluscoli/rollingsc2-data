@@ -10,3 +10,10 @@ damage_to_mine = "damage_to_mine"
 settings = "settings"
 loops = "loops"
 map_name = "map_name"
+
+damage_to_enemy_c = "对敌伤害"
+damage_to_mine_c = "我方受伤"
+loops_c = "游戏时长"
+
+aver = "aver "
+best = "best "

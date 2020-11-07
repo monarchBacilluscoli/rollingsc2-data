@@ -1,0 +1,50 @@
+// 3 - fix
+800	0	231	0	0	0	1533	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 00:40:04	priori assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+240	0	270	0	0	0	170	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 00:41:05	priori assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	215	0	0	0	1564	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 01:16:20	priori assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	223	0	0	0	1699	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 01:23:20	priori assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+
+// 3 - assemble
+800	0	245	0	0	0	1034	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 01:46:59	priori data_fix , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1, n
+800	0	232	0	0	0	588	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 01:49:58	priori data_fix , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1, n
+800	0	223	0	0	0	1223	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 02:32:52	priori data_fix , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	252	0	0	0	1924	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 02:58:16	priori data_fix , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	212	0	0	0	1932	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 03:06:21	priori data_fix , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1, n
+695	0	270	0	0	0	2207	PCANP_EnemyZealotsModMoreVSMarines	2020-04-28 01:34:21	priori data_fix , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 10, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	236	0	0	0	1600	PCANP_EnemyZealotsModMoreVSMarines	2020-04-28 01:46:45	priori data_fix , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 10, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+
+
+// 3 - priori
+800	0	220	0	0	0	1387	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 03:17:04	data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	244	0	0	0	2354	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 03:38:54	data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+795	0	270	0	0	0	1636	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 03:45:51	data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	212	0	0	0	1193	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 04:00:59	data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	186	0	0	0	1233	PCANP_EnemyZealotsModMoreVSMarines	2020-04-17 04:07:07	data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+
+
+// 3 - all
+800	0	244	0	0	0	2273	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 05:29:49	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+470	0	270	0	0	0	1213	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 05:45:39	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	244	0	0	0	2163	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 06:04:52	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	252	0	0	0	1764	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 06:29:17	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	244	0	0	0	2671	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 06:49:37	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	260	0	0	0	1900	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 06:49:37	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1, n
+800	0	260	0	0	0	1924	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 06:49:37	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1, n
+800	0	252	0	0	0	2060	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 06:49:37	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1, n
+800	0	220	0	0	0	2200	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 06:49:37	, play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1, n
+
+
+// 3 + all
+800	0	221	0	0	0	707	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 12:33:42	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	231	0	0	0	1041	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 12:46:19	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	154	0	0	0	1058	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 13:38:17	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	199	0	0	0	1311	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 14:05:21	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	244	0	0	0	1626	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 14:12:43	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	146	0	0	0	921	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 14:59:57	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	199	0	0	0	1193	PCANP_EnemyZealotsModMoreVSMarines	2020-04-19 15:06:03	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	138	0	0	0	782	PCANP_EnemyZealotsModMoreVSMarines	2020-04-20 02:23:01	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	244	0	0	0	2198	PCANP_EnemyZealotsModMoreVSMarines	2020-04-20 12:56:37	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+530	0	270	0	0	0	591	PCANP_EnemyZealotsModMoreVSMarines	2020-04-14 07:21:56	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	212	0	0	0	1146	PCANP_EnemyZealotsModMoreVSMarines	2020-04-14 07:30:05	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	191	0	0	0	902	PCANP_EnemyZealotsModMoreVSMarines	2020-04-14 07:36:46	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
+800	0	228	0	0	0	1957	PCANP_EnemyZealotsModMoreVSMarines	2020-04-14 07:45:45	priori data_fix assemble , play_style: NORMAL, population_size: 50, max_generations: 100, command_length: 50, sim_length: 300, interval_size: 200, evaluation_multiplier: 1,
