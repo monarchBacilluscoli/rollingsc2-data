@@ -137,9 +137,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-#some pics
-*.svg
-*.png
+#some pics #store them on public github is unsafe but convenient
+# *.svg
+# *.png
 
 #some data files
 *.SC2Replay
