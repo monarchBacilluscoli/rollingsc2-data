@@ -13,7 +13,7 @@ import setting_names as nm
 # 一些设置
 
 # data file path
-file_path = "/home/liuyongfeng/s2client-api-liu/s2client-api/scores/test_scores.txt"
+file_path = "test_scores.txt"
 # this is used to mark the start of the useable data
 start_comment = "evo higher generations"
 map_name = "PCANP_EnemyZealotsModMoreVSMarines"
@@ -34,7 +34,7 @@ def parse_setting(settings, item):  # 解析设置字符串
 raw_colomns = [nm.damage_to_enemy, 'dmg_shd', nm.damage_to_mine, 'hurt_shd', 'heal',
                'heal_shd', nm.loops, nm.map_name, 'time', 'settings']
 
-f_in = open(file_path, )
+f_in = open(file_path)
 line = f_in.readline()
 block = ""
 data_name = ""
