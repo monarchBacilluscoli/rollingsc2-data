@@ -77,12 +77,12 @@ for kv in all_data.items():
 # plt.show()
 print(final_sheet)
 # sns.set(style="ticks", palette="husl")
-sns.set(style="darkgrid", palette="husl")
+# sns.set(style="darkgrid", palette="husl")
 sns.catplot(kind='box', data=final_sheet, height=3, aspect=1)
 # sns.pointplot(data=final_sheet)
 plt.xlabel("Settings")
 plt.ylabel(title2[obj_num])
-plt.title("Schemes in 3 objs: " + title2[obj_num])
+# plt.title("Schemes in 3 objs: " + title2[obj_num])
 plt.show()
 
 # todo 同样配置的数据用字典怼一起去.
