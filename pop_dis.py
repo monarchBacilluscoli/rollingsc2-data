@@ -6,7 +6,7 @@ import re
 import sys
 from io import StringIO
 
-data_file_name = "./dis_test_comp_2.txt"
+data_file_name = "./dis_test_only_3.txt"
 
 f_in = open(data_file_name)
 line = f_in.readline()
@@ -39,7 +39,7 @@ whole = pd.concat([whole, df])
 whole = whole.reset_index()
 print(whole.iloc[1, :])
 
-sns.set(style="darkgrid")
+# sns.set(style="darkgrid")
 whole["Damage (to enemy)"] = -whole['Damage (to enemy)']
 # sns.relplot(x='Damage (to enemy)', y='Damage (to my team)', hue='Settings',
 #             style="Settings", data=whole[whole['rank'] == 0], alpha=0.9, height=4, aspect=1.2)

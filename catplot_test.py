@@ -6,7 +6,7 @@ import re
 import sys
 from io import StringIO
 
-file_name = "./test_scores_3.txt"
+file_name = "./test_scores_2_3.txt"
 obj_num = 6  # dmg dmg hurt hurt heal heal loop
 map_name = 'PCANP_EnemyZealotsModMoreVSMarines'
 title2 = {0: "Damage (to enemy)",
@@ -76,13 +76,15 @@ for kv in all_data.items():
         # print(final_sheet)
 # plt.show()
 print(final_sheet)
-# sns.set(style="ticks", palette="husl")
+sns.set_theme(style="ticks")
+plt.figure(figsize=(3,3))
 # sns.set(style="darkgrid", palette="husl")
-sns.catplot(kind='box', data=final_sheet, height=3, aspect=1)
+sns.boxplot(data=final_sheet)
 # sns.pointplot(data=final_sheet)
 plt.xlabel("Settings")
 plt.ylabel(title2[obj_num])
 # plt.title("Schemes in 3 objs: " + title2[obj_num])
+plt.savefig(file_name.replace(".txt",str(obj_num)+".svg"))
 plt.show()
 
 # todo 同样配置的数据用字典怼一起去.

@@ -6,6 +6,7 @@ import re
 import sys
 from io import StringIO
 
+file_name = "./tower_test.txt"
 obj_num = 0 # dmg dmg hurt hurt heal heal loop 
 map_name = 'EnemyTowerVSMarine'
 
@@ -17,7 +18,7 @@ all_data = {}
 # print(data)
 
 # catplot 一次只能对比同一个目标, 也就是三个目标想要一起比较z的话最好是子图
-f_in = open("./tower_test.txt")
+f_in = open(file_name)
 line = f_in.readline()
 block = ""
 data_name = ""
@@ -60,10 +61,13 @@ for kv in all_data.items():
     final_sheet[kv[0]] = kv[1].iloc[:, obj_num]
 # plt.show()
 print(final_sheet)
-g = sns.catplot(kind='box',data=final_sheet, height=3)
-g.set_axis_labels("Settings", "Damage (to enemy)")
+plt.figure(figsize=(3,3))
+sns.boxplot(data=final_sheet)
+plt.xlabel("Settings")
+plt.ylabel("Damage (to enemy)")
 # sns.pointplot(data=final_sheet)
 
+plt.savefig(file_name.replace(".txt",str(obj_num)+".svg"))
 plt.show()
 
 exit()
